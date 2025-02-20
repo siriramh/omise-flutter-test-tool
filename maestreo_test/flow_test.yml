@@ -34,21 +34,5 @@ appId: co.omise.android.example
 - tapOn: "Pay"
 - extendedWaitUntil:
     visible:
-      id: "co.omise.android.example:id/snackbar_text" # or any other selector
+      id: "co.omise.android.example:id/snackbar_text"
     timeout: 60000
-# - assertVisible:
-#     id: "co.omise.android.example:id/snackbar_text"
-# - copyText:
-#     id: "co.omise.android.example:id/snackbar_text"
-#     saveAs: snackbarValue
-# - script: |
-#     env.report("📱 Snackbar Value: " + storage.get("snackbarValue"))
-
-# - evalScript: |
-#     let snackbarElement = driver.findElementById("co.omise.android.example:id/snackbar_text")
-#     let snackbarText = snackbarElement.getText()
-#     storage.put("snackbarValue", snackbarText)
-#     env.report("Snackbar Text: " + snackbarText)
-
-# - evalScript: |
-#     console.log("Captured snackbar text: " + storage.get("snackbarValue"))
