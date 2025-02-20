@@ -1,0 +1,54 @@
+appId: co.omise.android.example
+---
+- launchApp
+- assertVisible:
+    id: "co.omise.android.example:id/title_text"
+- assertVisible: "Total Amount"
+- assertVisible:
+    id: "co.omise.android.example:id/amount_edit"
+- tapOn:
+    id: "co.omise.android.example:id/currency_edit"
+- assertVisible:
+    id: "co.omise.android.example:id/choose_payment_method_button"
+- tapOn: "Choose Payment Method"
+- assertVisible: "Credit/Debit Card"
+- tapOn: "Credit/Debit Card"
+- assertVisible: "Card Number"
+- assertVisible: "Name on card"
+- assertVisible: "Expiry Date\nSecurity code"
+- assertVisible: "Country or region"
+- assertVisible: "Thailand"
+- assertVisible: "Pay"
+- tapOn:
+    point: "14%,17%"
+- inputText: "4141414141414"
+- tapOn:
+    point: "22%,28%"
+- inputText: "Siriram Hazam"
+- tapOn: "MM/YY"
+- inputText: "0628"
+- tapOn:
+    point: "74%,42%"
+- inputText: "011"
+- assertVisible: "Thailand"
+- tapOn: "Pay"
+- extendedWaitUntil:
+    visible:
+      id: "co.omise.android.example:id/snackbar_text" # or any other selector
+    timeout: 60000
+# - assertVisible:
+#     id: "co.omise.android.example:id/snackbar_text"
+# - copyText:
+#     id: "co.omise.android.example:id/snackbar_text"
+#     saveAs: snackbarValue
+# - script: |
+#     env.report("📱 Snackbar Value: " + storage.get("snackbarValue"))
+
+# - evalScript: |
+#     let snackbarElement = driver.findElementById("co.omise.android.example:id/snackbar_text")
+#     let snackbarText = snackbarElement.getText()
+#     storage.put("snackbarValue", snackbarText)
+#     env.report("Snackbar Text: " + snackbarText)
+
+# - evalScript: |
+#     console.log("Captured snackbar text: " + storage.get("snackbarValue"))

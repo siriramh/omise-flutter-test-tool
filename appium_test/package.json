@@ -1,0 +1,19 @@
+{
+  "name": "appium_test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "appium": "appium"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "appium": "^2.15.0",
+    "appium-flutter-driver": "^2.13.0",
+    "appium-uiautomator2-driver": "^4.0.1",
+    "webdriverio": "^9.9.1"
+  }
+}
