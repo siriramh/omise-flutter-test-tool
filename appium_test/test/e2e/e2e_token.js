@@ -83,11 +83,6 @@ logger.init();
     console.log("Current page source:", source);
 
     // Select Credit/Debit Card
-    // const creditCardButton = await driver.$(
-    //   "id=co.omise.android.example:id/credit_card_button"
-    // );
-    // await creditCardButton.waitForDisplayed({ timeout: 10000 });
-    // await creditCardButton.click();
     await driver.performActions([
       {
         type: "pointer",
@@ -103,30 +98,7 @@ logger.init();
     ]);
     await driver.releaseActions();
 
-    // Verify card form elements
-    // await driver
-    //   .$('//*[@text="Card Number"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver
-    //   .$('//*[@text="Name on card"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver
-    //   .$('//*[@text="Expiry Date"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver
-    //   .$('//*[@text="Security code"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver
-    //   .$('//*[@text="Country or region"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver
-    //   .$('//*[@text="Thailand"]')
-    //   .waitForDisplayed({ timeout: 10000 });
-    // await driver.$('//*[@text="Pay"]').waitForDisplayed({ timeout: 10000 });
-
     // Fill card details
-    // const cardNumberField = await driver.$("//android.widget.EditText[1]");
-    // await cardNumberField.click();
     logger.log("Entering card details");
     await driver.performActions([
       {
@@ -145,8 +117,6 @@ logger.init();
     logger.log("Entering card number");
     await driver.keys("4141414141414");
 
-    // const nameField = await driver.$("//android.widget.EditText[2]");
-    // await nameField.click();
     await driver.performActions([
       {
         type: "pointer",
@@ -164,8 +134,6 @@ logger.init();
     logger.log("Entering cardholder name");
     await driver.keys("Siriram Hazam");
 
-    // const expiryField = await driver.$('//*[@text="MM/YY"]');
-    // await expiryField.click();
     await driver.performActions([
       {
         type: "pointer",
@@ -183,8 +151,6 @@ logger.init();
     logger.log("Entering expiry date");
     await driver.keys("0628");
 
-    // const cvvField = await driver.$("//android.widget.EditText[4]");
-    // await cvvField.click();
     await driver.performActions([
       {
         type: "pointer",
@@ -202,12 +168,7 @@ logger.init();
     logger.log("Entering CVV");
     await driver.keys("011");
 
-    // Verify Thailand is selected
-    // await driver.$('//*[@text="Thailand"]').waitForDisplayed();
-
     // Click Pay button
-    // const payButton = await driver.$('//*[@text="Pay"]');
-    // await payButton.click();
     await driver.performActions([
       {
         type: "pointer",
